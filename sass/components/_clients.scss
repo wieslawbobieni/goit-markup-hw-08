@@ -1,0 +1,38 @@
+.clients {
+  padding: 94px 0;
+  &__header {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.167;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  &__list {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  &__box {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--icon {
+      fill: #afb1b8;
+    }
+  }
+  &__link {
+    outline: none;
+    &:hover *,
+    &:focus * {
+      border-color: var(--hover-color);
+      fill: var(--hover-color);
+      transition: var(--transition-main);
+    }
+  }
+}
