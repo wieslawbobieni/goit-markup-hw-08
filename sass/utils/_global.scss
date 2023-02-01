@@ -20,6 +20,12 @@ ul {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 320px;
   margin: 0 auto;
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 800px;
+  }
 }
