@@ -6,12 +6,18 @@
     height: 80px;
   }
 }
-
 .header-border {
   border-bottom: 1px solid var(--border-bottom);
 }
 .header-contact {
-  display: flex;
+  @include tablet {
+    margin-left: 101px;
+    display: block;
+  }
+  @include desktop {
+    display: flex;
+    margin-left: 345px;
+  }
   &__link {
     text-decoration: none;
     display: flex;
@@ -24,6 +30,9 @@
   }
   &__item:not(:last-child) {
     margin-right: 30px;
+    @include tablet {
+      margin-bottom: 10px;
+    }
   }
   &__item:hover *,
   &__link:focus *,
@@ -41,6 +50,12 @@
 .main-menu {
   display: flex;
   margin-left: 93px;
+  @include tablet {
+    margin-left: 83px;
+  }
+  @include desktop {
+    margin-left: 93px;
+  }
   &__item:not(:last-child) {
     margin-right: 46px;
   }
@@ -63,12 +78,14 @@
       content: '';
       position: absolute;
       left: 0;
-      bottom: -28px;
       width: 53px;
       height: 4px;
       background: var(--accent-color);
       border-radius: 2px;
       transition: var(--transition-main);
+      @include tablet {
+        top: 45px;
+      }
     }
   }
 }

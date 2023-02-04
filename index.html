@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="./css/modern-normalize.min.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <title>HTML i CSS - Ósme zadanie domowe</title>
+    <title>HTML i CSS - Siódme zadanie domowe</title>
   </head>
   <body>
     <!-- Nagłówek -->
@@ -109,7 +109,7 @@
           <ul class="solutions-description__list">
             <li class="solutions-description__item">
               <div class="solutions-description__icon">
-                <svg widht="65.32" height="70">
+                <svg widht="70" height="70">
                   <use href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
@@ -216,11 +216,30 @@
           <ul class="team__list">
             <li class="team__item">
               <figure class="team__field">
-                <img
+                   <picture class="team__image">
+                                <source
+                                    media="screen and (max-width: 768px)"
+                                    srcset="
+                                        images/photo-product-designer-mobile-1x.jpg,
+                                        images/photo-product-designer-mobile-2x 2x
+                                    "
+                                />
+                                    <source
+                                    media="screen and (max-width: 1200px)"
+                                    srcset="
+                                        images/photo-product-designer-tablet-1x.jpg,
+                                        images/photo-product-designer-tablet-2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    srcset="
+                                       images/photo-product-designer-desktop-1x.jpg,
+                                        images/photo-product-designer-desktop-2x.jpg 2x
+                                    "
+                                />
+                <img class="team__image-img"
                   src="images/photo-product-designer.jpg"
                   alt="zdjęcie pierwszego członka zespołu"
-                  width="270"
-                  height="260"
                 />
                 <figcaption>
                   <h4 class="team__name">John Doe</h4>
@@ -264,11 +283,31 @@
             </li>
            <li class="team__item">
               <figure class="team__field">
-                <img
+                 <figure class="team__field">
+                   <picture class="team__image">
+                                <source
+                                    media="screen and (max-width: 768px)"
+                                    srcset="
+                                        images/photo-frontend-developer-mobile-1x.jpg,
+                                        images/photo-frontend-developer-mobile-2x 2x
+                                    "
+                                />
+                                    <source
+                                    media="screen and (max-width: 1200px)"
+                                    srcset="
+                                        images/photo-frontend-developer-tablet-1x.jpg,
+                                        images/photo-frontend-developer-tablet-2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    srcset="
+                                       images/photo-frontend-developer-desktop-1x.jpg,
+                                        images/photo-frontend-developer-desktop-2x.jpg 2x
+                                    "
+                                />
+                             <img class="team__image-img"
                 src="images/photo-frontend-developer.jpg"
                   alt="zdjęcie drugiego członka zespołu"
-                  width="270"
-                  height="260"
                 />
                 <figcaption>
                   <h4 class="team__name">John Doe</h4>
@@ -312,11 +351,30 @@
             </li>
            <li class="team__item">
               <figure class="team__field">
-                <img
+                                   <picture class="team__image">
+                                <source
+                                    media="screen and (max-width: 768px)"
+                                    srcset="
+                                        images/photo-marketing-mobile-1x.jpg,
+                                        images/photo-marketing-mobile-2x 2x
+                                    "
+                                />
+                                    <source
+                                    media="screen and (max-width: 1200px)"
+                                    srcset="
+                                        images/photo-marketing-tablet-1x.jpg,
+                                        images/photo-marketing-tablet-2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    srcset="
+                                       images/photo-marketing-desktop-1x.jpg,
+                                        images/photo-marketing-desktop-2x.jpg 2x
+                                    "
+                                />
+                                 <img class="team__image-img"
                      src="images/photo-marketing.jpg"
                   alt="zdjęcie trzeciego członka zespołu"
-                  width="270"
-                  height="260"
                 />
                 <figcaption>
                   <h4 class="team__name">John Doe</h4>
@@ -360,11 +418,31 @@
             </li>
            <li class="team__item">
               <figure class="team__field">
-                <img
+                                <picture class="team__image">
+                                <source
+                                    media="screen and (max-width: 768px)"
+                                    srcset="
+                                        images/photo-ui-designer-mobile-1x.jpg,
+                                        images/photo-ui-designer-mobile-2x 2x
+                                    "
+                                />
+                                    <source
+                                    media="screen and (max-width: 1200px)"
+                                    srcset="
+                                        images/photo-ui-designer-tablet-1x.jpg,
+                                        images/photo-ui-designer-tablet-2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    srcset="
+                                       images/photo-ui-designer-desktop-1x.jpg,
+                                        images/photo-ui-designer-desktop-2x.jpg 2x
+                                    "
+                                />
+                                
+                <img class="team__image-img"
                   src="images/photo-ui-designer.jpg"
                   alt="zdjęcie czwartego członka zespołu"
-                  width="270"
-                  height="260"
                 />
                 <figcaption>
                   <h4 class="team__name">John Doe</h4>
@@ -540,6 +618,5 @@
       </section>
     </footer>
     <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -1,53 +1,95 @@
 .solutions {
   margin: auto;
-  padding-top: 212px;
-  padding-bottom: 188px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/background-image.jpg');
+  padding-top: 118px;
+  padding-bottom: 198px;
   background-size: 100%;
-  max-width: 1600px;
+  width: 100%;
+  max-width: 100vw;
+  max-height: 400px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/background-image-mobile.jpg');
+  @include tablet {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/background-image-tablet.jpg');
+  }
+  @include desktop {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/background-image-desktop.jpg');
+    max-height: 600px;
+    padding-top: 212px;
+    padding-bottom: 188px;
+  }
   &__title-field {
-    max-width: 696px;
+    max-width: 365px;
     display: block;
     margin: 0 auto;
+    @include desktop {
+      max-width: 696px;
+    }
   }
   &__title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.363;
+    font-size: 26px;
+    line-height: calc(42 / 26);
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--highlight);
+    @include desktop {
+      font-size: 44px;
+      line-height: 1.363;
+    }
   }
 }
 
 .solutions-description {
-  padding: 94px 0;
+  display: flex;
+  justify-content: center;
+  padding: 60px 15px;
+  @include desktop {
+    padding: 94px 15px;
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     font-size: 14px;
     line-height: 2;
     letter-spacing: 0.03em;
     color: var(--description);
+    @include tablet {
+      max-width: 708px; /* wymuszenie dwóch kolumn - szerokość rodzica ustawiona tak, by nie zmieściły się maksymalnie dwa elementy dziecka */
+    }
+    @include desktop {
+      max-width: 1200px;
+    }
   }
   &__item {
-    flex-basis: calc((100% - 3 * 30px) / 4);
+    max-width: 450px;
+    @include tablet {
+      flex-basis: calc((100% - 1 * 30px) / 2);
+      max-width: 354px;
+    }
+    @include desktop {
+      flex-basis: calc((100% - 3 * 30px) / 4);
+      max-width: 270px;
+    }
   }
   &__icon {
     background-color: var(--bg-second);
-    width: 270px;
+    display: flex;
+    justify-content: center;
     height: 120px;
     padding-top: 25px;
     padding-bottom: 25px;
     margin-bottom: 30px;
     border-radius: 4px;
   }
+
   &__header {
     font-weight: 700;
     font-size: 14px;
