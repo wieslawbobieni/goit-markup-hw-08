@@ -439,6 +439,9 @@ ul {
             align-items: baseline;
   }
 }
+.newsletter-form__label {
+  width: 100%;
+}
 .newsletter-form__input-email {
   width: 100%;
   height: 50px;
