@@ -83,10 +83,13 @@
   flex-direction: column;
   flex-wrap: wrap;
   padding-top: 60px;
+  width: 100%;
+  max-width: 450px;
   @include desktop {
     display: block;
     padding-top: 12px;
     margin-left: 70px;
+    width: 100%;
   }
   &__header {
     font-weight: 700;
@@ -108,7 +111,7 @@
     align-items: baseline;
   }
   &__input-email {
-    width: 450px;
+    width: 100%;
     @include tablet {
       width: 450px;
     }

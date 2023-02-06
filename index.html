@@ -12,16 +12,34 @@
     />
     <link rel="stylesheet" href="./css/modern-normalize.min.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <title>HTML i CSS - Siódme zadanie domowe</title>
+    <title>HTML i CSS - Ósme zadanie domowe</title>
   </head>
   <body>
     <!-- Nagłówek -->
-    <header class="header-border">
+    <header>
+      <!-- MOBILE MENU -->
+      <button
+          class="header__mobile-button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            class="header__mobile-button-icon"
+          >
+           <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+    <!-- MOBILE MENU -->
       <div class="container header">
         <a class="logo logo--no-decoration" href="index.html"
-          ><span>Web</span><span class="logo--secondary-color1">Studio</span></a
+        ><span>Web</span><span class="logo--secondary-color1">Studio</span></a
         >
-
+        
         <nav>
           <ul class="main-menu">
             <li class="main-menu__item"><a class="main-menu__link main-menu__link--active" href="index.html">Agencja</a></li>
@@ -107,7 +125,7 @@
       <section class="solutions-description">
         <div class="container">
           <!-- Nasze atuty-->
-          <ul class="solutions-description__list">
+      <ul class="solutions-description__list">
             <li class="solutions-description__item">
               <div class="solutions-description__icon">
                 <svg widht="70" height="70">
@@ -222,20 +240,18 @@
                                     media="screen and (max-width: 768px)"
                                     srcset="
                                         images/photo-product-designer-mobile-1x.jpg,
-                                        images/photo-product-designer-mobile-2x 2x
+                                        images/photo-product-designer-mobile-2x.jpg 2x
                                     "
                                 />
                                     <source
                                     media="screen and (max-width: 1200px)"
-                                    srcset="
-                                        images/photo-product-designer-tablet-1x.jpg,
-                                        images/photo-product-designer-tablet-2x.jpg 2x
-                                    "
+                                    srcset="images/photo-product-designer-tablet-1x.jpg,
+                                    images/photo-product-designer-tablet-2x.jpg 2r"
                                 />
                                 <source
                                     srcset="
                                        images/photo-product-designer-desktop-1x.jpg,
-                                        images/photo-product-designer-desktop-2x.jpg 2x
+                                      images/photo-product-designer-desktop-2x.jpg 2x
                                     "
                                 />
                 <img class="team__image-img"
@@ -290,7 +306,7 @@
                                     media="screen and (max-width: 768px)"
                                     srcset="
                                         images/photo-frontend-developer-mobile-1x.jpg,
-                                        images/photo-frontend-developer-mobile-2x 2x
+                                        images/photo-frontend-developer-mobile-2x,jpg 2x
                                     "
                                 />
                                     <source
@@ -357,7 +373,7 @@
                                     media="screen and (max-width: 768px)"
                                     srcset="
                                         images/photo-marketing-mobile-1x.jpg,
-                                        images/photo-marketing-mobile-2x 2x
+                                        images/photo-marketing-mobile-2x.jpg 2x
                                     "
                                 />
                                     <source
@@ -424,7 +440,7 @@
                                     media="screen and (max-width: 768px)"
                                     srcset="
                                         images/photo-ui-designer-mobile-1x.jpg,
-                                        images/photo-ui-designer-mobile-2x 2x
+                                        images/photo-ui-designer-mobile-2x.jpg 2x
                                     "
                                 />
                                     <source
@@ -618,6 +634,69 @@
         </div>
       </section>
     </footer>
+    <!-- -------------MOBILE MENU MODAL------------------------------- -->
+    <div class="menu-mobile-container js-menu-container" id="mobile-menu">
+      <button class="menu-mobile-container__close js-close-menu">&times;</button>
+
+      <ul class="menu-mobile-container__nav-list">
+        <li><a class="menu-mobile-container__nav-link menu-mobile-container__nav-link--active" href="index.html">Agencja</a></li>
+  <li><a class="menu-mobile-container__nav-link" href="portfolio.html">Portfolio</a></li>
+  <li><a class="menu-mobile-container__nav-link" href="">Kontakt</a></li>
+      </ul>
+    <div class="menu-mobile-container__footer">
+                <div class="menu-mobile-container__footer__contacts">
+                    <a
+                        class="menu-mobile-container__footer__contacts-link menu-mobile-container__footer__contacts-link--tel"
+                        href="tel:+48111111111"
+                    >
+                        +48 111 111 111
+                    </a>
+                    <a
+                        class="menu-mobile-container__footer__contacts-link menu-mobile-container__footer__contacts-link--email"
+                        href="mailto:info@devstudio.com"
+                    >
+                        info@devstudio.com</a
+                    >
+                </div>
+                <ul class="menu-mobile-container__footer__social-list">
+                    <li class="menu-mobile-container__footer__social-item">
+                        <a
+                            class="menu-mobile-container__footer__social-link"
+                            href=""
+                            >Instagram</a
+                        >
+                    </li class="menu-mobile-container__footer__social-item">
+ <li>
+                        <a
+                            class="menu-mobile-container__footer__social-link"
+                            href=""
+                            >Twitter</a
+                        >
+                    </li class="menu-mobile-container__footer__social-item">
+ <li>
+                        <a
+                            class="menu-mobile-container__footer__social-link"
+                            href=""
+                            >Facebook</a
+                        >
+                    </li class="menu-mobile-container__footer__social-item">
+ <li>
+                        <a
+                            class="menu-mobile-container__footer__social-link"
+                            href=""
+                            >Linkedin</a
+                        >
+                    </li>
+                </ul>
+            </div>
+    </div>
+     <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

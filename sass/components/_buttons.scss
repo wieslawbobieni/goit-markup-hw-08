@@ -50,7 +50,10 @@
   display: flex;
   align-items: center;
   padding: 10px 24px 10px 42px;
-  margin: 0 0 0 12px;
+  margin: 0;
+  @include desktop {
+    margin: 0 0 0 12px;
+  }
   &--send-icon {
     fill: var(--highlight);
     margin: 24px auto;
